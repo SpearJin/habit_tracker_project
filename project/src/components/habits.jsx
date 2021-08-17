@@ -2,38 +2,22 @@ import React, { Component } from 'react';
 import Habit from './habit';
 
 class Habits extends Component {
-  state = {
-    habits: [
-      { id: 1, name: 'Reading', count: 0 },
-      { id: 2, name: 'Runnding', count: 0 },
-      { id: 3, name: 'Coding', count: 0 },
-    ],
-  };
-
   handleIncrease = (habit) => {
-    const habits = [...this.state.habits];
-    const index = habits.indexOf(habit);
-    habits[index].count++;
-    this.setState({ habits });
+    this.props.onIncreament(habit);
   };
 
   handleDecrease = (habit) => {
-    const habits = [...this.state.habits];
-    const index = habits.indexOf(habit);
-    const count = habits[index].count;
-    habits[index].count = count <= 0 ? 0 : count - 1;
-    this.setState({ habits });
+    this.props.onDecreament(habit);
   };
 
   handleDelete = (habit) => {
-    const habits = this.state.habits.filter((item) => item.id !== habit.id);
-    this.setState({ habits });
+    this.props.onDelete(habit);
   };
 
   render() {
     return (
       <ul className='habits'>
-        {this.state.habits.map((habit) => (
+        {this.props.habits.map((habit) => (
           <Habit
             key={habit.id}
             habit={habit}

@@ -3,10 +3,40 @@
   user-select: none;
 }
 
+body {
+  margin: 0;
+}
+
 button {
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: blanchedalmond;
+  font-size: 2rem;
+}
+
+.navbar-logo {
+  margin-right: 0.5rem;
+  color: green;
+}
+
+.navbar-count {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  margin: 0 0.2em;
+  border-radius: 50%;
+  background-color: seagreen;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .habit {

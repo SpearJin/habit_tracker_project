@@ -33,6 +33,18 @@ class App extends Component {
     this.setState({ habits });
   };
 
+  handleAdd = (name) => {
+    const habits = [
+      ...this.state.habits,
+      {
+        id: Date.now(),
+        name,
+        count: 0,
+      },
+    ];
+    this.setState({ habits });
+  };
+
   render() {
     return (
       <div>
@@ -41,7 +53,7 @@ class App extends Component {
             this.state.habits.filter((item) => item.count !== 0).length
           }
         />
-        <AddForm />
+        <AddForm onAdd={this.handleAdd} />
         <Habits
           habits={this.state.habits}
           onIncreament={this.handleIncrease}

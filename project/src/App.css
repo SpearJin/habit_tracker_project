@@ -92,3 +92,14 @@ button {
   color: darkred;
   font-size: 2rem;
 }
+
+.habits-reset {
+  border-radius: 4px;
+  background-color: darkred;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.habits-reset:hover {
+  opacity: 0.8;
+}

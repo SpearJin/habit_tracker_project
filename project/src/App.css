@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.habit {
+  padding: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.habit-count {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 0.2em;
+  border-radius: 50%;
+  background-color: seagreen;
+  color: white;
+  text-align: center;
+}
+
+.habit-button {
+  background-color: transparent;
+  font-size: 2rem;
+}
+
+.habit-button:hover {
+  opacity: 0.8;
+}
+
+.habit-increase,
+.habit-decrease {
+  color: goldenrod;
+}
+
+.habit-delete {
+  color: darkred;
+  font-size: 2rem;
+}

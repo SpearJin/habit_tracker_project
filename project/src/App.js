@@ -1,10 +1,10 @@
-import Habit from './components/habit';
 import './App.css';
+import Habits from './components/habits';
 
 function App() {
   return (
     <div>
-      <Habit />
+      <Habits />
     </div>
   );
 }

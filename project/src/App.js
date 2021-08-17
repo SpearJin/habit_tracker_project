@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Habits from './components/habits';
 import Navbar from './components/navbar';
+import AddForm from './components/addForm';
 
 class App extends Component {
   state = {
@@ -40,6 +41,7 @@ class App extends Component {
             this.state.habits.filter((item) => item.count !== 0).length
           }
         />
+        <AddForm />
         <Habits
           habits={this.state.habits}
           onIncreament={this.handleIncrease}

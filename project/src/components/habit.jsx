@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 
 class Habit extends Component {
   handleIncrease = () => {
-    this.setState({ count: this.state.count + 1 });
+    this.props.onIncreament(this.props.habit);
   };
 
   handleDecrease = () => {
-    const count = this.state.count;
-    this.setState({ count: count <= 0 ? 0 : count - 1 });
+    this.props.onDecreament(this.props.habit);
   };
 
-  handleDelete = () => {};
+  handleDelete = () => {
+    this.props.onDelete(this.props.habit);
+  };
 
   render() {
     const { name, count } = this.props.habit;
